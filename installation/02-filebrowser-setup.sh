@@ -14,7 +14,7 @@ curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bas
 echo "Creating FileBrowser directory..."
 mkdir -p /home/rpi02w/filebrowser
 touch /home/rpi02w/filebrowser/filebrowser.db
-
+sudo filebrowser --password gaia12345678 -d /home/rpi02w/filebrowser/filebrowser.db   -r /home/rpi02w/autoplay   -a 0.0.0.0   -p 8080 
 echo "FileBrowser setup complete!"
 echo "Next: Copy systemd/filebrowser.service to /etc/systemd/system/"
 sudo cp systemd/filebrowser.service /etc/systemd/system/
@@ -23,4 +23,4 @@ sudo systemctl enable filebrowser.service
 sudo systemctl start filebrowser.service
 echo "Access FileBrowser at: http://<rpi-ip>:8080"
 echo "Default password: gaia12345678"
-filebrowser --password gaia12345678
+
