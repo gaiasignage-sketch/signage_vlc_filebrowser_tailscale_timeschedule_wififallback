@@ -11,9 +11,8 @@ sudo chmod +x /usr/local/bin/safe-display-scheduler.sh
 
 echo "Scheduler setup complete!"
 echo "Next: Add cron jobs for scheduling"
-echo "  sudo crontab -e"
-echo ""
+sudo crontab -e
 echo "Add these lines:"
-echo "59 23 * * * /usr/local/bin/safe-display-scheduler.sh off   # Spegni display a 23:59"
-echo "00 05 * * * /usr/local/bin/safe-display-scheduler.sh on    # Accendi display a 05:00"
-echo "10 05 * * * /sbin/reboot                                   # Reboot a 05:10"
+59 23 * * * /usr/local/bin/safe-display-scheduler.sh off
+00 05 * * * /usr/local/bin/safe-display-scheduler.sh on
+10 05 * * * /sbin/reboot
