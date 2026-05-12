@@ -7,7 +7,7 @@ Type=simple
 User=rpi02w
 WorkingDirectory=/home/rpi02w
 ExecStart=/usr/local/bin/filebrowser \
-  -d /home/rpi02w/filebrowser/filebrowser.db \
+  -d /home/rpi02w/filebrowser.db \
   -r /home/rpi02w/autoplay \
   -a 0.0.0.0 \
   -p 8080
