@@ -35,11 +35,10 @@ sudo nmcli con modify HotspotEmergenza \
 
 echo "WiFi Fallback setup complete!"
 echo "Next: Copy systemd/autohotspot.service to /etc/systemd/system/"
-echo "  sudo cp systemd/autohotspot.service /etc/systemd/system/"
-echo "  sudo systemctl daemon-reload"
-echo "  sudo systemctl enable autohotspot.service"
-echo ""
+sudo cp systemd/autohotspot.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable autohotspot.service
 echo "IMPORTANTE:"
 echo "- Hotspot SSID: RPi_Config"
-echo "- Hotspot password: gaia1234 (CAMBIALA!)"
+echo "- Hotspot password: gaia1234"
 echo "- Accesso web: http://10.42.0.1"
