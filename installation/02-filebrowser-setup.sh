@@ -23,4 +23,4 @@ sudo systemctl enable filebrowser.service
 sudo systemctl start filebrowser.service
 echo "Access FileBrowser at: http://<rpi-ip>:8080"
 echo "Default password: gaia12345678"
-
+filebrowser --password gaia12345678
