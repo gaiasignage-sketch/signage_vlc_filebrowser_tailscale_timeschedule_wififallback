@@ -1,0 +1,13 @@
+[Unit]
+Description=Hotspot di Emergenza con Pagina Web
+After=NetworkManager.service network-online.target
+Wants=NetworkManager.service network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/autohotspot.sh
+Restart=no
+User=root
+
+[Install]
+WantedBy=multi-user.target

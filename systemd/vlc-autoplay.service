@@ -1,0 +1,25 @@
+[Unit]
+Description=VLC Autoplay su Pi Zero
+After=network.target
+
+[Service]
+Type=simple
+User=rpi02w
+WorkingDirectory=/home/rpi02w/autoplay
+
+Environment="DISPLAY=:0"
+
+ExecStart=/usr/bin/cvlc \
+  --fullscreen \
+  --loop \
+  --no-video-title-show \
+  --no-audio \
+  --quiet \
+  --play-and-exit \
+  /home/rpi02w/autoplay/
+
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

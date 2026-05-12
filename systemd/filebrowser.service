@@ -1,0 +1,17 @@
+[Unit]
+Description=File Browser Web FileManager
+After=network.target
+
+[Service]
+Type=simple
+User=rpi02w
+WorkingDirectory=/home/rpi02w
+ExecStart=/usr/local/bin/filebrowser \
+  -d /home/rpi02w/filebrowser/filebrowser.db \
+  -r /home/rpi02w/autoplay \
+  -a 0.0.0.0 \
+  -p 8080
+Restart=unless-stopped
+
+[Install]
+WantedBy=multi-user.target
